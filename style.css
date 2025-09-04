@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario Estilizado</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    form {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 500px;
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    input[type="radio"] {
+      margin: 10px 5px 10px 0;
+    }
+
+    p {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #ff4b2b;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff3a1a;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      form {
+        padding: 20px 25px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      label {
+        font-size: 13px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="time"] {
+        font-size: 13px;
+        padding: 8px;
+      }
+
+      button {
+        font-size: 15px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      form {
+        padding: 15px 20px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      label {
+        font-size: 12px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="time"] {
+        font-size: 12px;
+        padding: 7px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 9px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h2>Formulario de Registro</h2>
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" />
+
+    <label for="correo">Correo Electrónico</label>
+    <input type="email" id="correo" name="correo" placeholder="Escribe tu correo" />
+
+    <label for="clave">Contraseña</label>
+    <input type="password" id="clave" name="clave" required />
+
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" name="edad" placeholder="Escribe tu edad" />
+
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono" />
+
+    <label for="fecha">Fecha de Nacimiento</label>
+    <input type="date" id="fecha" name="fecha" />
+
+    <label for="hora">Hora</label>
+    <input type="time" id="hora" name="hora" />
+
+    <p>Género</p>
+    <label><input type="radio" name="GENERO" value="FEMENINO" /> Femenino</label>
+    <label><input type="radio" name="GENERO" value="MASCULINO" /> Masculino</label>
+    <label><input type="radio" name="GENERO" value="OTRO" /> Otro</label>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
